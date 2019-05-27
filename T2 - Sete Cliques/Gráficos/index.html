@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Trabalho 2 - Sistemas Operacionais</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="myDiv"></div>
+    </div>
+    <script>
+        var trace1 = {
+          x: [1,2,3,4,5,6,7,8,9,10],
+          y: [0.065141,
+              0.062898,
+              0.091324,
+              0.070784,
+              0.105320,
+              0.062985,
+              0.063989,
+              0.063068,
+              0.062543,
+              0.108945],
+          mode: 'lines',
+          name: 'Serial'
+        };
+
+        var trace2 = {
+          x: [1,2,3,4,5,6,7,8,9,10],
+          y: [0.070616,
+              0.066837,
+              0.063476,
+              0.061437,
+              0.072135,
+              0.068919,
+              0.099334,
+              0.065756,
+              0.064987,
+              0.062391],
+          mode: 'lines',
+          name: '1 Thread'
+        };
+
+        var trace3 = {
+          x: [1,2,3,4,5,6,7,8,9,10],
+          y: [0.067631,
+              0.054721,
+              0.068362,
+              0.087523,
+              0.078731,
+              0.083609,
+              0.078735,
+              0.129535,
+              0.045238,
+              0.080872],
+          mode: 'lines',
+          name: '2 Threads'
+        };
+
+        var trace4 = {
+          x: [1,2,3,4,5,6,7,8,9,10],
+          y: [0.088385,
+              0.146711,
+              0.068779,
+              0.003822,
+              0.106844,
+              0.108717,
+              0.118740,
+              0.150106,
+              0.088419,
+              0.084927],
+          mode: 'lines',
+          name: '4 Threads'
+        };
+
+        var trace5 = {
+          x: [1,2,3,4,5,6,7,8,9,10],
+          y: [0.631246,
+              0.277333,
+              0.320510,
+              0.296954,
+              0.282630,
+              0.206074,
+              0.069876,
+              0.138137,
+              0.225850,
+              0.016082],
+          mode: 'lines',
+          name: '8 Threads'
+        };
+
+        var data = [ trace1, trace2, trace3, trace4, trace5];
+        var layout = { title:'Execução Serial + 1 Thread + 2 Threads + 4 Threads + 8 Threads' };
+        Plotly.newPlot('myDiv', data, layout);
+    </script>
+</body>
+
+</html>
+
+ 
